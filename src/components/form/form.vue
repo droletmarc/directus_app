@@ -117,6 +117,18 @@ export default {
 				return hiddenDetail == '0' || hiddenDetail === false;
 			});
 
+            // Filter out the fields that are marked hidden on batch
+            fields = fields.filter(fieldInfo => {
+                if (!this.batchMode) return true;
+
+                const hiddenBatch = fieldInfo.hidden_batch;
+
+                if (hiddenBatch === undefined) return true;
+
+                // NOTE: non strict equal on the 0 cause it might be a number or a string
+                return hiddenBatch == '0' || hiddenBatch === false;
+            });
+
 			// Sort the fields on the sort column value
 			fields = fields.sort((a, b) => {
 				if (a.sort == b.sort) return 0;

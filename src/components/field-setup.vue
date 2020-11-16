@@ -190,6 +190,7 @@
 						<v-switch v-model="unique" :label="$t('unique')" />
 						<v-switch v-model="hidden_detail" :label="$t('hidden_detail')" />
 						<v-switch v-model="hidden_browse" :label="$t('hidden_browse')" />
+						<v-switch v-model="hidden_batch" :label="$t('hidden_batch')" />
 						<v-switch v-if="isNumeric" v-model="signed" :label="$t('signed')" />
 
 						<label class="translation">
@@ -621,6 +622,7 @@ export default {
 			note: null,
 			hidden_detail: false,
 			hidden_browse: false,
+			hidden_batch: false,
 			primary_key: false,
 			signed: true,
 			width: 'full',
@@ -1153,6 +1155,7 @@ export default {
 				note: this.note,
 				hidden_detail: this.hidden_detail,
 				hidden_browse: this.hidden_browse,
+				hidden_batch: this.hidden_batch,
 				primary_key: this.primary_key,
 				validation: this.validation,
 				width: this.width,
@@ -1450,6 +1453,7 @@ export default {
 					group: null,
 					hidden_detail: true,
 					hidden_browse: true,
+					hidden_batch: true,
 					interface: 'primary-key',
 					length: '10',
 					locked: 0,
@@ -1483,6 +1487,7 @@ export default {
 				interface: null,
 				hidden_detail: true,
 				hidden_browse: true,
+				hidden_batch: true,
 				required: true,
 				options: null,
 				locked: false,
@@ -1509,6 +1514,7 @@ export default {
 				interface: null,
 				hidden_detail: true,
 				hidden_browse: true,
+				hidden_batch: true,
 				required: true,
 				options: null,
 				locked: false,

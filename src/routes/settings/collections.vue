@@ -177,7 +177,8 @@ export default {
 					auto_increment: true,
 					primary_key: true,
 					hidden_detail: true,
-					hidden_browse: true
+					hidden_browse: true,
+					hidden_batch: true
 				}
 			];
 			let fieldsToDispatch = {
@@ -190,6 +191,7 @@ export default {
 					group: null,
 					hidden_detail: true,
 					hidden_browse: true,
+					hidden_batch: true,
 					interface: 'primary-key',
 					length: '10',
 					locked: 0,
@@ -271,6 +273,7 @@ export default {
 					interface: 'status',
 					hidden_detail: false,
 					hidden_browse: false,
+					hidden_batch: false,
 					required: true,
 					options: {
 						status_mapping: {
@@ -323,6 +326,7 @@ export default {
 					interface: 'sort',
 					hidden_detail: true,
 					hidden_browse: true,
+					hidden_batch: true,
 					width: 'full'
 				});
 				fieldsToDispatch.sort = {
@@ -340,6 +344,7 @@ export default {
 					interface: 'sort',
 					hidden_detail: true,
 					hidden_browse: true,
+					hidden_batch: true,
 					required: false,
 					options: null,
 					locked: false,
@@ -364,6 +369,7 @@ export default {
 					readonly: true,
 					hidden_detail: true,
 					hidden_browse: true,
+					hidden_batch: true,
 					width: 'full'
 				});
 				fieldsToDispatch.owner = {
@@ -381,6 +387,7 @@ export default {
 					interface: 'owner',
 					hidden_detail: true,
 					hidden_browse: true,
+					hidden_batch: true,
 					required: false,
 					options: {
 						template: '{{first_name}} {{last_name}}',
@@ -404,6 +411,7 @@ export default {
 					readonly: true,
 					hidden_detail: true,
 					hidden_browse: true,
+					hidden_batch: true,
 					width: 'full'
 				});
 				fieldsToDispatch.created_on = {
@@ -421,6 +429,7 @@ export default {
 					interface: 'datetime-created',
 					hidden_detail: true,
 					hidden_browse: true,
+					hidden_batch: true,
 					required: false,
 					options: null,
 					locked: false,
@@ -445,6 +454,7 @@ export default {
 					readonly: true,
 					hidden_detail: true,
 					hidden_browse: true,
+					hidden_batch: true,
 					width: 'full'
 				});
 				fieldsToDispatch.modified_by = {
@@ -462,6 +472,7 @@ export default {
 					interface: 'user-updated',
 					hidden_detail: true,
 					hidden_browse: true,
+					hidden_batch: true,
 					required: false,
 					options: {
 						template: '{{first_name}} {{last_name}}',
@@ -485,6 +496,7 @@ export default {
 					readonly: true,
 					hidden_detail: true,
 					hidden_browse: true,
+					hidden_batch: true,
 					width: 'full'
 				});
 				fieldsToDispatch.modified_on = {
@@ -502,6 +514,7 @@ export default {
 					interface: 'datetime-updated',
 					hidden_detail: true,
 					hidden_browse: true,
+					hidden_batch: true,
 					required: false,
 					options: null,
 					locked: false,
